@@ -51,3 +51,27 @@ if (myMap5.get("age") >= 18) {
 } else {
 
 }
+
+
+
+//User Finding with ID
+const employeeDirectory = new Map([
+    [101, { name: "John Doe", department: "Marketing" }],
+    [102, { name: "Emily Clark", department: "Finance" }],
+    [103, { name: "Jane Smith", department: "Engineering" }],
+    [104, { name: "Mike Johnson", department: "IT" }],
+    [105, { name: "Anna Brown", department: "HR" }]
+    ]);
+
+function findUser(id) {
+    if (employeeDirectory.has(id)) {
+        let userInfos = employeeDirectory.get(id)
+        console.log(`name: ${userInfos.name} and department: ${userInfos.department}`);
+    }
+    else{
+        console.log('topilmadi');
+        
+    }
+}
+
+findUser(104)
