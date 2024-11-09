@@ -35,3 +35,19 @@ const person3 = {
     myMap1.delete("firstname");
     console.log(myMap1);
     
+
+
+
+    //Task for Map age 
+const userName2 = prompt ('enter your name') ?? 'islom'
+const userAge2 = prompt ('enter your age') ?? '25'
+
+const myMap5 = new Map();
+myMap5.set('firstname', userName2);
+myMap5.set('age', userAge2);
+
+if (myMap5.get("age") >= 18) {
+    console.log(`${myMap5.get('firstname')} siz 18yoshdan kattasiz`);
+} else {
+
+}
