@@ -21,3 +21,17 @@ const person3 = {
     console.log(companyName);
     console.log(person3.study?.());
     console.log(person3.job);
+
+
+
+//Exercise Map
+    const myMap1 = new Map();
+    myMap1.set('firstname', 'Ulugbek');
+    myMap1.set('lastname', 'Samigjonov');
+    myMap1.set('age', 25);
+    
+    console.log(myMap1);
+    // console.log(myMap.has("firstname"));
+    myMap1.delete("firstname");
+    console.log(myMap1);
+    
