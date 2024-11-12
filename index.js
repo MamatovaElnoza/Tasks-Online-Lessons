@@ -16,31 +16,31 @@ document.getElementById('text3').innerHTML = person.age;
 const person3 = {
     name: 'Ulugbek',
     age: 25
-    };
-    const companyName = person3.job?.companyName;
-    console.log(companyName);
-    console.log(person3.study?.());
-    console.log(person3.job);
+};
+const companyName = person3.job?.companyName;
+console.log(companyName);
+console.log(person3.study?.());
+console.log(person3.job);
 
 
 
 //Exercise Map
-    const myMap1 = new Map();
-    myMap1.set('firstname', 'Ulugbek');
-    myMap1.set('lastname', 'Samigjonov');
-    myMap1.set('age', 25);
-    
-    console.log(myMap1);
-    // console.log(myMap.has("firstname"));
-    myMap1.delete("firstname");
-    console.log(myMap1);
-    
+const myMap1 = new Map();
+myMap1.set('firstname', 'Ulugbek');
+myMap1.set('lastname', 'Samigjonov');
+myMap1.set('age', 25);
+
+console.log(myMap1);
+// console.log(myMap.has("firstname"));
+myMap1.delete("firstname");
+console.log(myMap1);
 
 
 
-    //Task for Map age 
-const userName2 = prompt ('enter your name') ?? 'islom'
-const userAge2 = prompt ('enter your age') ?? '25'
+
+//Task for Map age 
+const userName2 = prompt('enter your name') ?? 'islom'
+const userAge2 = prompt('enter your age') ?? '25'
 
 const myMap5 = new Map();
 myMap5.set('firstname', userName2);
@@ -61,17 +61,32 @@ const employeeDirectory = new Map([
     [103, { name: "Jane Smith", department: "Engineering" }],
     [104, { name: "Mike Johnson", department: "IT" }],
     [105, { name: "Anna Brown", department: "HR" }]
-    ]);
+]);
 
 function findUser(id) {
     if (employeeDirectory.has(id)) {
         let userInfos = employeeDirectory.get(id)
         console.log(`name: ${userInfos.name} and department: ${userInfos.department}`);
     }
-    else{
+    else {
         console.log('topilmadi');
-        
+
     }
 }
 
 findUser(104)
+
+
+
+
+
+// Soliq hisoblab beruvchi funksiya
+function createTaxCalculator(taxRate) {
+    return function (productPrice) {
+        return productPrice * taxRate;
+    };
+}
+const educationTax = createTaxCalculator(0.05); // 5% tax
+const transportationTax = createTaxCalculator(0.2); // 20% tax
+const foodTax = createTaxCalculator(0.1); // 10% tax
+console.log(educationTax(1000));
