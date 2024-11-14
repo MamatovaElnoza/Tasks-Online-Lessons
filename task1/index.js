@@ -90,3 +90,16 @@ const educationTax = createTaxCalculator(0.05); // 5% tax
 const transportationTax = createTaxCalculator(0.2); // 20% tax
 const foodTax = createTaxCalculator(0.1); // 10% tax
 console.log(educationTax(1000));
+
+
+
+
+
+
+
+
+
+
+
+
+
